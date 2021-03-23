@@ -51,6 +51,11 @@ namespace Talegen.MK.InTouch.Models.Customers
         OptedIn,
 
         /// <summary>
+        /// Opted out by consultant.
+        /// </summary>
+        OptedOutByConsultant,
+
+        /// <summary>
         /// Opted out by customer
         /// </summary>
         OptedOutByCustomer

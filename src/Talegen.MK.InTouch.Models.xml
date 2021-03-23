@@ -34,6 +34,11 @@
             Opted in
             </summary>
         </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSubscriptionStatus.OptedOutByConsultant">
+            <summary>
+            Opted out by consultant.
+            </summary>
+        </member>
         <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSubscriptionStatus.OptedOutByCustomer">
             <summary>
             Opted out by customer
@@ -558,6 +563,35 @@
             Gets or sets the year.
             </summary>
             <value>The year.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse">
+            <summary>
+            This class represents a customer's spouse information.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerSpouse.EmailAddress">
+            <summary>
+            Gets or sets the email address.
+            </summary>
+            <value>The email address.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerSpouse.PhoneNumber">
+            <summary>
+            Gets or sets the phone number.
+            </summary>
+            <value>The phone number.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerSpouse.Extension">
+            <summary>
+            Gets or sets the extension.
+            </summary>
+            <value>The extension.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerSpouse.SpouseName">
+            <summary>
+            Gets or sets the name of the spouse.
+            </summary>
+            <value>The name of the spouse.</value>
         </member>
         <member name="T:Talegen.MK.InTouch.Models.ModelDefaults">
             <summary>
