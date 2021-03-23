@@ -18,10 +18,13 @@ namespace Talegen.MK.InTouch.Models.Customers
 {
     using System;
     using System.Collections.Generic;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// Contains an enumerated list of customer email address statuses.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum CustomerEmailStatus
     {
         /// <summary>
@@ -43,6 +46,7 @@ namespace Talegen.MK.InTouch.Models.Customers
     /// <summary>
     /// Contains an enumerated list of customer subscription statuses.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum CustomerSubscriptionStatus
     {
         /// <summary>

@@ -17,10 +17,13 @@
 namespace Talegen.MK.InTouch.Models.Customers
 {
     using System;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// Contains an enumerated list of email subscription types.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum CustomerEmailSubscriptionType
     {
         /// <summary>

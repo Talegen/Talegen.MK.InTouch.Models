@@ -17,10 +17,13 @@
 namespace Talegen.MK.InTouch.Models.Customers
 {
     using System;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// Contains an enumerated list of customer address types.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum CustomerAddressType
     {
         /// <summary>
@@ -32,6 +35,11 @@ namespace Talegen.MK.InTouch.Models.Customers
         /// Business address.
         /// </summary>
         Business,
+
+        /// <summary>
+        /// Shipping address.
+        /// </summary>
+        Shipping,
 
         /// <summary>
         /// Other address.

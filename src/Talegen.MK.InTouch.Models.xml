@@ -292,6 +292,11 @@
             Business address.
             </summary>
         </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerAddressType.Shipping">
+            <summary>
+            Shipping address.
+            </summary>
+        </member>
         <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerAddressType.Other">
             <summary>
             Other address.

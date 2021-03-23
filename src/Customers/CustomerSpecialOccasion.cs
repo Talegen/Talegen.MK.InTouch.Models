@@ -17,10 +17,13 @@
 namespace Talegen.MK.InTouch.Models.Customers
 {
     using System;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
 
     /// <summary>
     /// Contains an enumerated list of special occasion types.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum CustomerSpecialOccasionType
     {
         /// <summary>
