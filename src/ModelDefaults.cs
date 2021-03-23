@@ -16,12 +16,14 @@
 
 namespace Talegen.MK.InTouch.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
-
+    /// <summary>
+    /// This class contains default constant values.
+    /// </summary>
     public class ModelDefaults
     {
+        /// <summary>
+        /// The default language.
+        /// </summary>
         public const string DefaultLanguage = "en-US";
     }
 }

@@ -17,8 +17,6 @@
 namespace Talegen.MK.InTouch.Models.Customers
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// Contains an enumerated list of email subscription types.

@@ -39,6 +39,9 @@ namespace Talegen.MK.InTouch.Models.Customers
         Mobile
     }
 
+    /// <summary>
+    /// This class represents a customer phone number.
+    /// </summary>
     public class CustomerPhoneNumber
     {
         /// <summary>
