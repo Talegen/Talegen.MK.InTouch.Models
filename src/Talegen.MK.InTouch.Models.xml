@@ -9,6 +9,11 @@
             Contains an enumerated list of customer email address statuses.
             </summary>
         </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerEmailStatus.NewlyAdded">
+            <summary>
+            Newly added.
+            </summary>
+        </member>
         <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerEmailStatus.Blocked">
             <summary>
             Email is blocked.

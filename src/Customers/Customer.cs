@@ -28,6 +28,11 @@ namespace Talegen.MK.InTouch.Models.Customers
     public enum CustomerEmailStatus
     {
         /// <summary>
+        /// Newly added.
+        /// </summary>
+        NewlyAdded,
+
+        /// <summary>
         /// Email is blocked.
         /// </summary>
         Blocked,
