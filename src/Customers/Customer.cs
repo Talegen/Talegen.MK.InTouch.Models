@@ -251,7 +251,7 @@ namespace Talegen.MK.InTouch.Models.Customers
         /// Gets or sets the spouse.
         /// </summary>
         /// <value>The spouse.</value>
-        public string Spouse { get; set; }
+        public CustomerSpouse Spouse { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the user.

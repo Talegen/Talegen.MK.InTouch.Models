@@ -10,12 +10,12 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.MK.InTouch.Models</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Mary Kay</PackageTags>
-    <PackageReleaseNotes>Fixed IsRegisteredForPws to be nullable.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added Spouse model to support customer spouse parameter.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageProjectUrl>https://talegen.com/</PackageProjectUrl>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
     <PackageIcon>logo.png</PackageIcon>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
   </PropertyGroup>
