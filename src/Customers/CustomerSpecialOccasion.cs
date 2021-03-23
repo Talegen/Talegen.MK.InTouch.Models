@@ -61,18 +61,18 @@ namespace Talegen.MK.InTouch.Models.Customers
         /// Gets or sets the day.
         /// </summary>
         /// <value>The day.</value>
-        public int Day { get; set; }
+        public int? Day { get; set; }
 
         /// <summary>
         /// Gets or sets the month.
         /// </summary>
         /// <value>The month.</value>
-        public int Month { get; set; }
+        public int? Month { get; set; }
 
         /// <summary>
         /// Gets or sets the year.
         /// </summary>
         /// <value>The year.</value>
-        public int Year { get; set; }
+        public int? Year { get; set; }
     }
 }
