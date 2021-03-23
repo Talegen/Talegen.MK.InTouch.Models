@@ -35,6 +35,36 @@ namespace Talegen.MK.InTouch.Models.Customers
         /// Birthday.
         /// </summary>
         Birthday,
+
+        /// <summary>
+        /// Graduation.
+        /// </summary>
+        Graduation,
+
+        /// <summary>
+        /// New baby.
+        /// </summary>
+        NewBaby,
+
+        /// <summary>
+        /// New job.
+        /// </summary>
+        NewJob,
+
+        /// <summary>
+        /// Vacation.
+        /// </summary>
+        Vacation,
+
+        /// <summary>
+        /// Wedding.
+        /// </summary>
+        Wedding,
+
+        /// <summary>
+        /// Other
+        /// </summary>
+        Other
     }
 
     /// <summary>

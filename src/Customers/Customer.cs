@@ -33,6 +33,11 @@ namespace Talegen.MK.InTouch.Models.Customers
         NewlyAdded,
 
         /// <summary>
+        /// Duplicate.
+        /// </summary>
+        Duplicate,
+
+        /// <summary>
         /// Email is blocked.
         /// </summary>
         Blocked,
