@@ -78,14 +78,8 @@ namespace Talegen.MK.InTouch.Models.Customers
     /// <summary>
     /// This class represents a customer within the application.
     /// </summary>
-    public class Customer
+    public class Customer : CustomerBase
     {
-        /// <summary>
-        /// Gets or sets the customer identifier.
-        /// </summary>
-        /// <value>The customer identifier.</value>
-        public Guid CustomerId { get; set; } = Guid.NewGuid();
-
         /// <summary>
         /// Gets or sets the consultant key.
         /// </summary>
@@ -105,18 +99,6 @@ namespace Talegen.MK.InTouch.Models.Customers
         public DateTime? ImageLastUpdatedDateUtc { get; set; }
 
         /// <summary>
-        /// Gets or sets the preferred language.
-        /// </summary>
-        /// <value>The preferred language.</value>
-        public string PreferredLanguage { get; set; } = ModelDefaults.DefaultLanguage;
-
-        /// <summary>
-        /// Gets or sets a value indicating whether this instance can send SMS to the customer cell phone.
-        /// </summary>
-        /// <value><c>true</c> if this instance can send SMS to cell; otherwise, <c>false</c>.</value>
-        public bool CanSendSMSToCell { get; set; }
-
-        /// <summary>
         /// Gets or sets a value indicating whether this instance is interested in business opportunity.
         /// </summary>
         /// <value><c>true</c> if this instance is interested in business opportunity; otherwise, <c>false</c>.</value>
@@ -133,36 +115,6 @@ namespace Talegen.MK.InTouch.Models.Customers
         /// </summary>
         /// <value>The mke cards subscription status.</value>
         public CustomerSubscriptionStatus MkeCardsSubscriptionStatus { get; set; }
-
-        /// <summary>
-        /// Gets or sets the profile date UTC.
-        /// </summary>
-        /// <value>The profile date UTC.</value>
-        public DateTime? ProfileDateUtc { get; set; }
-
-        /// <summary>
-        /// Gets or sets the first name.
-        /// </summary>
-        /// <value>The first name.</value>
-        public string FirstName { get; set; }
-
-        /// <summary>
-        /// Gets or sets the name of the middle.
-        /// </summary>
-        /// <value>The name of the middle.</value>
-        public string MiddleName { get; set; }
-
-        /// <summary>
-        /// Gets or sets the last name.
-        /// </summary>
-        /// <value>The last name.</value>
-        public string LastName { get; set; }
-
-        /// <summary>
-        /// Gets or sets the employer.
-        /// </summary>
-        /// <value>The employer.</value>
-        public string Employer { get; set; }
 
         /// <summary>
         /// Gets or sets the email.
@@ -211,18 +163,6 @@ namespace Talegen.MK.InTouch.Models.Customers
         /// </summary>
         /// <value>The special occasions.</value>
         public List<CustomerSpecialOccasion> SpecialOccasions { get; set; } = new List<CustomerSpecialOccasion>();
-
-        /// <summary>
-        /// Gets or sets the date added UTC.
-        /// </summary>
-        /// <value>The date added UTC.</value>
-        public DateTime? DateAddedUtc { get; set; }
-
-        /// <summary>
-        /// Gets or sets the date registered UTC.
-        /// </summary>
-        /// <value>The date registered UTC.</value>
-        public DateTime? DateRegisteredUtc { get; set; }
 
         /// <summary>
         /// Gets or sets the last order date UTC.
@@ -301,11 +241,5 @@ namespace Talegen.MK.InTouch.Models.Customers
         /// </summary>
         /// <value>The updated by client key.</value>
         public string UpdatedByClientKey { get; set; }
-
-        /// <summary>
-        /// Gets or sets the tags.
-        /// </summary>
-        /// <value>The tags.</value>
-        public List<string> Tags { get; set; } = new List<string>();
     }
 }

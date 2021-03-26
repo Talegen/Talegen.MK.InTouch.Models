@@ -4,6 +4,45 @@
         <name>Talegen.MK.InTouch.Models</name>
     </assembly>
     <members>
+        <member name="T:Talegen.MK.InTouch.Models.Common.DeleteRequestModel">
+            <summary>
+            This class is the model posted to the /api/commands/deletecustomers and /purgecustomers endpoints.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Common.DeleteRequestModel.Ids">
+            <summary>
+            Gets or sets the ids.
+            </summary>
+            <value>The ids.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Common.RecordResponseItemModel">
+            <summary>
+            This class defines an update response sub-item within the update response model.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Common.RecordResponseItemModel.Href">
+            <summary>
+            Gets or sets the href.
+            </summary>
+            <value>The href.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Common.RecordResponseModel">
+            <summary>
+            This model is returned when a record is
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Common.RecordResponseModel.Self">
+            <summary>
+            Gets or sets the self.
+            </summary>
+            <value>The self.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Common.RecordResponseModel.Detail">
+            <summary>
+            Gets or sets the detail.
+            </summary>
+            <value>The detail.</value>
+        </member>
         <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerEmailStatus">
             <summary>
             Contains an enumerated list of customer email address statuses.
@@ -12,6 +51,11 @@
         <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerEmailStatus.NewlyAdded">
             <summary>
             Newly added.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerEmailStatus.Duplicate">
+            <summary>
+            Duplicate.
             </summary>
         </member>
         <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerEmailStatus.Blocked">
@@ -54,12 +98,6 @@
             This class represents a customer within the application.
             </summary>
         </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.CustomerId">
-            <summary>
-            Gets or sets the customer identifier.
-            </summary>
-            <value>The customer identifier.</value>
-        </member>
         <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.ConsultantKey">
             <summary>
             Gets or sets the consultant key.
@@ -78,18 +116,6 @@
             </summary>
             <value>The image last updated date UTC.</value>
         </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.PreferredLanguage">
-            <summary>
-            Gets or sets the preferred language.
-            </summary>
-            <value>The preferred language.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.CanSendSMSToCell">
-            <summary>
-            Gets or sets a value indicating whether this instance can send SMS to the customer cell phone.
-            </summary>
-            <value><c>true</c> if this instance can send SMS to cell; otherwise, <c>false</c>.</value>
-        </member>
         <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.IsInterestedInBusinessOpportunity">
             <summary>
             Gets or sets a value indicating whether this instance is interested in business opportunity.
@@ -107,36 +133,6 @@
             Gets or sets the mke cards subscription status.
             </summary>
             <value>The mke cards subscription status.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.ProfileDateUtc">
-            <summary>
-            Gets or sets the profile date UTC.
-            </summary>
-            <value>The profile date UTC.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.FirstName">
-            <summary>
-            Gets or sets the first name.
-            </summary>
-            <value>The first name.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.MiddleName">
-            <summary>
-            Gets or sets the name of the middle.
-            </summary>
-            <value>The name of the middle.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.LastName">
-            <summary>
-            Gets or sets the last name.
-            </summary>
-            <value>The last name.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.Employer">
-            <summary>
-            Gets or sets the employer.
-            </summary>
-            <value>The employer.</value>
         </member>
         <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.Email">
             <summary>
@@ -185,18 +181,6 @@
             Gets or sets the special occasions.
             </summary>
             <value>The special occasions.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.DateAddedUtc">
-            <summary>
-            Gets or sets the date added UTC.
-            </summary>
-            <value>The date added UTC.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.DateRegisteredUtc">
-            <summary>
-            Gets or sets the date registered UTC.
-            </summary>
-            <value>The date registered UTC.</value>
         </member>
         <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.LastOrderDateUtc">
             <summary>
@@ -275,12 +259,6 @@
             Gets or sets the updated by client key.
             </summary>
             <value>The updated by client key.</value>
-        </member>
-        <member name="P:Talegen.MK.InTouch.Models.Customers.Customer.Tags">
-            <summary>
-            Gets or sets the tags.
-            </summary>
-            <value>The tags.</value>
         </member>
         <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerAddressType">
             <summary>
@@ -383,6 +361,77 @@
             Gets or sets the telephone.
             </summary>
             <value>The telephone.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerBase">
+            <summary>
+            This class contains the common properties used throughout all customer models.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.CustomerId">
+            <summary>
+            Gets or sets the customer identifier.
+            </summary>
+            <value>The customer identifier.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+            <value>The first name.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.MiddleName">
+            <summary>
+            Gets or sets the name of the middle.
+            </summary>
+            <value>The name of the middle.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+            <value>The last name.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.Employer">
+            <summary>
+            Gets or sets the employer.
+            </summary>
+            <value>The employer.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.PreferredLanguage">
+            <summary>
+            Gets or sets the preferred language.
+            </summary>
+            <value>The preferred language.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.CanSendSMSToCell">
+            <summary>
+            Gets or sets a value indicating whether this instance can send SMS to the customer cell phone.
+            </summary>
+            <value><c>true</c> if this instance can send SMS to cell; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.ProfileDateUtc">
+            <summary>
+            Gets or sets the profile date UTC.
+            </summary>
+            <value>The profile date UTC.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.DateAddedUtc">
+            <summary>
+            Gets or sets the date added UTC.
+            </summary>
+            <value>The date added UTC.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.DateRegisteredUtc">
+            <summary>
+            Gets or sets the date registered UTC.
+            </summary>
+            <value>The date registered UTC.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerBase.Tags">
+            <summary>
+            Gets or sets the tags.
+            </summary>
+            <value>The tags.</value>
         </member>
         <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerEmailSubscriptionType">
             <summary>
@@ -518,6 +567,184 @@
             </summary>
             <value>The extension.</value>
         </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.ProfileQuestionType">
+            <summary>
+            Contains an enumerated list of customer phone number types.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.ProfileQuestionType.SingleOption">
+            <summary>
+            A single option choice.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.ProfileQuestionType.MultipleOptions">
+            <summary>
+            Multiple options choices.
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestion">
+            <summary>
+            This class represents a customer profile question record.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestion.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestion.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestion.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestion.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestion.Options">
+            <summary>
+            Gets or sets the options.
+            </summary>
+            <value>The options.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestion.Answer">
+            <summary>
+            Gets or sets the answer.
+            </summary>
+            <value>The answer.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestion.Answers">
+            <summary>
+            Gets or sets the answers.
+            </summary>
+            <value>The answers.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionGroup">
+            <summary>
+            This class represents a customer profile question group.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionGroup.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionGroup.Text">
+            <summary>
+            Gets or sets the group text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionGroup.Questions">
+            <summary>
+            Gets or sets the questions.
+            </summary>
+            <value>The questions.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionOption">
+            <summary>
+            This class represents a customer profile question option.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionOption.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionOption.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionOption.ImageUrl">
+            <summary>
+            Gets or sets the image URL.
+            </summary>
+            <value>The image URL.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionOption.AllowFreeText">
+            <summary>
+            Gets or sets the allow free text.
+            </summary>
+            <value>The allow free text.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerProfileQuestionOption.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetworkType">
+            <summary>
+            Contains an enumerated list of customer phone number types.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetworkType.Facebook">
+            <summary>
+            Facebook.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetworkType.Twitter">
+            <summary>
+            Twitter.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetworkType.Instagram">
+            <summary>
+            Instagram.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetworkType.YouTube">
+            <summary>
+            YouTube.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetworkType.LinkedIn">
+            <summary>
+            Lnkedin.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetworkType.Other">
+            <summary>
+            Other (Blog, etc.)
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetwork">
+            <summary>
+            This class represents a customer social network profile record.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetwork.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>The key.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetwork.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.CustomerSocialNetwork.Url">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+            <value>The URL.</value>
+        </member>
         <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasionType">
             <summary>
             Contains an enumerated list of special occasion types.
@@ -531,6 +758,36 @@
         <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasionType.Birthday">
             <summary>
             Birthday.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasionType.Graduation">
+            <summary>
+            Graduation.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasionType.NewBaby">
+            <summary>
+            New baby.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasionType.NewJob">
+            <summary>
+            New job.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasionType.Vacation">
+            <summary>
+            Vacation.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasionType.Wedding">
+            <summary>
+            Wedding.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasionType.Other">
+            <summary>
+            Other
             </summary>
         </member>
         <member name="T:Talegen.MK.InTouch.Models.Customers.CustomerSpecialOccasion">
@@ -602,6 +859,370 @@
             Gets or sets the name of the spouse.
             </summary>
             <value>The name of the spouse.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerAddressDetail">
+            <summary>
+            This class represents a customer address detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactTimes">
+            <summary>
+            Contains an enumerated list of customer preferred contact times.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactTimes.AM">
+            <summary>
+            Contact time in the AM.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactTimes.PM">
+            <summary>
+            Contact time in the PM.
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactMethods">
+            <summary>
+            Contains an enumerated list of customer preferred contact methods.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactMethods.Email">
+            <summary>
+            Contact customer via e-mail.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactMethods.Phone">
+            <summary>
+            Contact customer via phone call.
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactFrequencies">
+            <summary>
+            Contains an enumerated list of customer preferred contact frequencies.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactFrequencies.Monthly">
+            <summary>
+            Contact monthly.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactFrequencies.EveryTwoMonths">
+            <summary>
+            Contact every two months.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactFrequencies.EveryThreeMonths">
+            <summary>
+            Contact every three months.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactFrequencies.WhenNewProductsAreAvailable">
+            <summary>
+            Contact when new products are available.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerContactFrequencies.OnlyWhenIAmReady">
+            <summary>
+            Contact only when I am ready.
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerGender">
+            <summary>
+            Contains an enumerated list of biological genders.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerGender.Male">
+            <summary>
+            Customer is male.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerGender.Female">
+            <summary>
+            Customer is female.
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerLearningTopicsOfInterestTypes">
+            <summary>
+            Contains an enumerated list of topics of interest.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerLearningTopicsOfInterestTypes.AdditionalSkinCareOptions">
+            <summary>
+            Additional skin care options.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerLearningTopicsOfInterestTypes.FragranceBodyCare">
+            <summary>
+            Fragrance Body Care.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerLearningTopicsOfInterestTypes.ColorApplicationTechniques">
+            <summary>
+            Color Application Techniques.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerLearningTopicsOfInterestTypes.MensProducts">
+            <summary>
+            Mens Products.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerLearningTopicsOfInterestTypes.GiftGivingServices">
+            <summary>
+            Gift Giving Services.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerLearningTopicsOfInterestTypes.EarningExtraMoney">
+            <summary>
+            Earning Extra Money.
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerShoppingMethods">
+            <summary>
+            Defines an enumerate list of customer shopping methods.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerShoppingMethods.Party">
+            <summary>
+            Shop at Party.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerShoppingMethods.Online">
+            <summary>
+            Shop Online.
+            </summary>
+        </member>
+        <member name="F:Talegen.MK.InTouch.Models.Customers.Details.CustomerShoppingMethods.Phone">
+            <summary>
+            Shop Phone.
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail">
+            <summary>
+            This class represents the customer details record returned from the In Touch API.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.EmailAddress">
+            <summary>
+            Gets or sets the email address.
+            </summary>
+            <value>The email address.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Occupation">
+            <summary>
+            Gets or sets the occupation.
+            </summary>
+            <value>The occupation.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PreferredContactMethods">
+            <summary>
+            Gets or sets a list of preferred contact methods.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PreferredContactTimes">
+            <summary>
+            Gets or sets a list of preferred contact times.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PreferredContactFrequencies">
+            <summary>
+            Gets or sets a list of preferred contact frequencies.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PreferredContactDays">
+            <summary>
+            Gets or sets a list of preferred contact days.
+            </summary>
+            <remarks>This does not appear to be used by the MKIT interface.</remarks>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Addresses">
+            <summary>
+            Gets or sets the addresses.
+            </summary>
+            <value>The addresses.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PhoneNumbers">
+            <summary>
+            Gets or sets the phone numbers.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.ReferredBy">
+            <summary>
+            Gets or sets the referred by name.
+            </summary>
+            <value>The referred by.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Comments">
+            <summary>
+            Gets or sets the comments.
+            </summary>
+            <value>The comments.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Spouse">
+            <summary>
+            Gets or sets the customer spouse.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Gender">
+            <summary>
+            Gets or sets the customer gender.
+            </summary>
+            <value>The customer gender.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Note">
+            <summary>
+            Gets or sets the note.
+            </summary>
+            <value>The note.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PictureLastUpdatedDateUtc">
+            <summary>
+            Gets or sets the picture last updated date UTC.
+            </summary>
+            <value>The picture last updated date UTC.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.SocialNetworks">
+            <summary>
+            Gets or sets a list of social network details.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Birthday">
+            <summary>
+            Gets or sets a customer birthday.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Anniversary">
+            <summary>
+            Gets or sets a customer anniversary.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.ImportantDates">
+            <summary>
+            Gets or sets any additional customer important dates.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.LearningTopicsOfInterest">
+            <summary>
+            Gets or sets a list of learning topics of interest.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.Subscriptions">
+            <summary>
+            Gets or sets the email subscriptions.
+            </summary>
+            <value>The email subscriptions.</value>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.IsRegistered">
+            <summary>
+            Gets or sets a value indicating whether the customer is registered.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PreferredShippingMethods">
+            <summary>
+            Gets or sets a list of preferred shipping methods
+            </summary>
+            <remarks>It does not appear to be used.</remarks>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PreferredShoppingMethods">
+            <summary>
+            Gets or sets the preferred shopping methods.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PreferredDeliveryMethod">
+            <summary>
+            Gets or sets the preferred delivery method.
+            </summary>
+            <remarks>Does not appear to be used.</remarks>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.PreferredDeliveryMethodDetailsIfOther">
+            <summary>
+            Gets or sets the preferred delivery method details if preferred method is Other.
+            </summary>
+            <remarks>Does not appear to be used.</remarks>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetail.ProfileQuestionGroups">
+            <summary>
+            Gets or sets a list of customer profile question group models.
+            </summary>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetailRecordResponseModel">
+            <summary>
+            This model is returned when a customer record is updated.
+            </summary>
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerDetailRecordResponseModel.Photo">
+            <summary>
+            Gets or sets the photo.
+            </summary>
+            <value>The photo.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerEmailSubscriptionDetail">
+            <summary>
+            This class represents a customer email subscription detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerPhoneNumberDetail">
+            <summary>
+            This class represents a customer phone number detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerProfileQuestionDetail">
+            <summary>
+            This class represents a customer profile question detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerProfileQuestionDetail.Options">
+            <summary>
+            Gets or sets the options.
+            </summary>
+            <value>The options.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerProfileQuestionGroupDetail">
+            <summary>
+            This class represents a customer profile question group detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
+        </member>
+        <member name="P:Talegen.MK.InTouch.Models.Customers.Details.CustomerProfileQuestionGroupDetail.Questions">
+            <summary>
+            Gets or sets the questions.
+            </summary>
+            <value>The questions.</value>
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerProfileQuestionOptionDetail">
+            <summary>
+            This class represents a customer profile question option detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerSocialNetworkDetail">
+            <summary>
+            This class represents a customer social network detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerSpecialOccasionDetail">
+            <summary>
+            This class represents a customer phone number detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
+        </member>
+        <member name="T:Talegen.MK.InTouch.Models.Customers.Details.CustomerSpouseDetail">
+            <summary>
+            This class represents a customer spouse detail model.
+            </summary>
+            <remarks>Because the MKIT developers decided to change casing of JSON models between queries, we must make a unique class with naming strategy.</remarks>
+            <seealso cref="T:Talegen.MK.InTouch.Models.Customers.CustomerSpouse" />
         </member>
         <member name="T:Talegen.MK.InTouch.Models.ModelDefaults">
             <summary>
