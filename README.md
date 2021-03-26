@@ -1,9 +1,11 @@
 # Talegen.MK.InTouch.Models
 Talegen Mary Kay® InTouch Models is set of client models gleaned from, and used for interaction with, the Mary Kay® InTouch Web Application.
 
-This repository ([Talegen.MK.InTouch.Models](https://github.com/Talegen/Talegen.MK.InTouch.Models) is where we (Talegen) develop the Talegen Mary Kay® InTouch Models library. The source code here is available to everyone under the standard [Apache 2.0 license](https://github.com/talegen/Talegen.PureBlue.Models/blob/main/LICENSE).
+This repository ([Talegen.MK.InTouch.Models](https://github.com/Talegen/Talegen.MK.InTouch.Models)) is where we ([Talegen](https://talegen.com/)) develop the Talegen Mary Kay® InTouch Models library. The source code here is available to everyone under the standard [Apache 2.0 license](https://github.com/talegen/Talegen.PureBlue.Models/blob/main/LICENSE).
 
-The purpose of this library is to provide a library of client data models generated and used by the Mary Kay® InTouch web application.  
+The purpose of this code is to provide a library of client data models generated and used by the Mary Kay® InTouch web application.
+
+**NOTE:** There is no specific documentation for this application and models. These are derived from communicating with the API directly. As the models change over time, we will make attempts to keep this library up to date. We are in no way currently in contact with or working with the MKIT Application team. We've reached out to them on several occasions but as of yet have not heard back.
 
 ## Contributing
 
